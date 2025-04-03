@@ -73,3 +73,24 @@ async function consumep(){
 }
 consumep()
 
+// async function getalluser(){
+//    try{
+//     const response = await fetch('https://api.api-ninjas.com/v1/randomuser')
+//    const data =  await response.json()
+//    console.log(data)
+//    }
+//    catch(error){
+//     console.log("E:" , error);
+//    }
+// }
+// getalluser()
+
+
+
+fetch('https://api.api-ninjas.com/v1/randomuser')
+.then(response => response.json())
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=>console.log("error"))
+
